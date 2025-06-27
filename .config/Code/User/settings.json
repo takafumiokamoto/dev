@@ -1,0 +1,139 @@
+{
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Material Palenight",
+  "editor.inlineSuggest.enabled": true,
+  // "window.menuBarVisibility": "classic",
+  "workbench.activityBar.location": "bottom",
+  "window.commandCenter": true,
+  "workbench.statusBar.visible": true,
+  "bladeFormatter.format.sortHtmlAttributes": "code-guide",
+  "bladeFormatter.format.sortTailwindcssClasses": true,
+  //   "php.debug.executablePath": "C:\\Program Files\\php\\php-8.2.6-Win32-vs16-x64\\php.exe",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.lineNumbers": "relative",
+  "vim.leader": "<Space>",
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": false,
+  "vim.easymotion": true,
+  "vim.handleKeys": {
+    "<C-d>": true,
+    "<C-w>": false,
+    "<C-c>": false,
+    "<C-v>": false,
+    "<C-x>": false,
+    "<C-f>": false,
+    "<C-a>": false,
+    "<C-p>": false
+  },
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["q", "q"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "d"],
+      "after": ["d", "d"]
+    },
+    // switch tab
+    { "before": ["<S-h>"], "commands": [":bprevious"] },
+    { "before": ["<S-l>"], "commands": [":bnext"] },
+
+    // splits
+    { "before": ["leader", "v"], "commands": [":vsplit"] },
+    { "before": ["leader", "s"], "commands": [":split"] },
+
+    // panes
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+    {
+      "before": ["leader", "<S-p>"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["leader", "p"],
+      "commands": ["editor.action.marker.next"]
+    },
+    {
+      "before": ["<leader>", "c", "a"],
+      "commands": ["editor.action.quickFix"]
+    },
+    { "before": ["leader", "f"], "commands": ["editor.action.formatDocument"] },
+    {
+      "before": ["g", "h"],
+      "commands": ["editor.action.showDefinitionPreviewHover"]
+    },
+    {
+      "before": ["<leader>", "m"],
+      "commands": ["bookmarks.toggle"]
+    },
+    {
+      "before": ["<leader>", "b"],
+      "commands": ["bookmarks.list"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    // Stay in visual mode while indenting
+    { "before": ["<"], "commands": ["editor.action.outdentLines"] },
+    { "before": [">"], "commands": ["editor.action.indentLines"] },
+    // Move selected lines while staying in visual mode
+    { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+    { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+    // toggle comment selection
+    { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
+    {
+      "before": ["q", "q"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "terminal.integrated.fontFamily": "CaskaydiaMono NF",
+  "git.autofetch": true,
+  "prettier.singleQuote": true,
+  "terminal.integrated.env.windows": {},
+  "[blade]": {
+    "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+    "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
+  },
+  "chat.commandCenter.enabled": false,
+  "editor.renderWhitespace": "none",
+  "[powershell]": {
+    "editor.defaultFormatter": "ms-vscode.powershell"
+  },
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "security.allowedUNCHosts": ["wsl.localhost"],
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "editor.fontFamily": "CaskaydiaMono NF"
+}
