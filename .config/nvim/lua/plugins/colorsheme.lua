@@ -1,12 +1,14 @@
 return {
-    "alexmozaidze/palenight.nvim",
-    priority = 1000,
-    enabled = true,
-    config = function()
-      local palenight = require("palenight")
-      palenight.setup({
-        italic = true
-      })
-      vim.cmd("colorscheme palenight")
-    end,
+	"JoosepAlviste/palenightfall.nvim",
+	priority = 1000,
+	enabled = true,
+	config = function()
+		local palenight = require("palenightfall")
+		palenight.setup({
+			transparent = true,
+			italic = true,
+		})
+		vim.cmd("colorscheme palenightfall")
+	end,
 }
+
