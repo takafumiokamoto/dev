@@ -30,7 +30,7 @@ cli: .d
 	aqua i
 
 .PHONY: config ## Install Configuration
-cli: .d
+config: .d
 	uv run --script scripts/install.py
 
 .PHONY: all ## Install All
