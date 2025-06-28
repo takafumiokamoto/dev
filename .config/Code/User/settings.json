@@ -41,15 +41,12 @@
       "before": ["<leader>", "d"],
       "after": ["d", "d"]
     },
-    // switch tab
     { "before": ["<S-h>"], "commands": [":bprevious"] },
     { "before": ["<S-l>"], "commands": [":bnext"] },
 
-    // splits
     { "before": ["leader", "v"], "commands": [":vsplit"] },
     { "before": ["leader", "s"], "commands": [":split"] },
 
-    // panes
     {
       "before": ["leader", "h"],
       "commands": ["workbench.action.focusLeftGroup"]
@@ -96,28 +93,21 @@
     }
   ],
   "vim.visualModeKeyBindings": [
-    // Stay in visual mode while indenting
     { "before": ["<"], "commands": ["editor.action.outdentLines"] },
     { "before": [">"], "commands": ["editor.action.indentLines"] },
-    // Move selected lines while staying in visual mode
     { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
     { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
-    // toggle comment selection
     { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] },
     {
       "before": ["q", "q"],
       "after": ["<Esc>"]
     }
   ],
-  "terminal.integrated.fontFamily": "CaskaydiaMono NF",
   "git.autofetch": true,
   "prettier.singleQuote": true,
   "terminal.integrated.env.windows": {},
   "[blade]": {
     "editor.defaultFormatter": "shufo.vscode-blade-formatter"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[php]": {
     "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
@@ -134,6 +124,6 @@
     "scminput": false
   },
   "security.allowedUNCHosts": ["wsl.localhost"],
-  "javascript.updateImportsOnFileMove.enabled": "never",
   "editor.fontFamily": "CaskaydiaMono NF"
+  "terminal.integrated.fontFamily": "CaskaydiaMono NF",
 }
