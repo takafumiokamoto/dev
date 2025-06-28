@@ -14,11 +14,11 @@ c:
 	git commit -m "$(CURRENT_DATETIME)"
 	git push
 
-.PHONY: .uv  ## Check dependency
+.PHONY: .uv  ## Check that uv is installed
 .uv:
 	@uv -V || echo 'Please install uv: https://docs.astral.sh/uv/getting-started/installation/'
 
-.PHONY: .aqua
+.PHONY: .aqua ## Check that aqua is installed
 	@aqua version || echo 'Please install aqua: https://aquaproj.github.io/docs/install'
 
 .PHONY: .d ## Check dependency
