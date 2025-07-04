@@ -1,7 +1,8 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	version = false,
-	branch = "main",
+	-- branch = "main",
+	branch = "master",
 	build = ":TSUpdate",
 	event = { "BufReadPost", "BufNewFile" },
 	dependencies = {
@@ -102,4 +103,3 @@ return {
 		})
 	end,
 }
-

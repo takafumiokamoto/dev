@@ -3,6 +3,7 @@ vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename reference" })
 
 -- keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
 -- keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })

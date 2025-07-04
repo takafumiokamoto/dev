@@ -8,6 +8,9 @@ return {
 		version = "*",
 		config = function()
 			require("blink.cmp").setup({
+				keymap = {
+					preset = "super-tab",
+				},
 				snippets = { preset = "luasnip" },
 				signature = { enabled = true },
 				appearance = {
@@ -22,9 +25,6 @@ return {
 							min_keyword_length = 2,
 						},
 					},
-				},
-				keymap = {
-					["<C-f>"] = {},
 				},
 				cmdline = {
 					enabled = false,
