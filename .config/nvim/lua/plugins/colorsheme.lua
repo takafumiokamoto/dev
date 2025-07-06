@@ -11,4 +11,3 @@ return {
 		vim.cmd("colorscheme palenightfall")
 	end,
 }
-
