@@ -1,12 +1,13 @@
-vim.keymap.set("v", "<C-c>", [["+y]])
-vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
-vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
-vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
-vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
-vim.keymap.set("v", "<S-i>", "<C-v>^<S-i>", { noremap = true, desc = "Visual Block Mode" })
-vim.keymap.set("v", "<S-a>", "<C-v>$<S-a>", { noremap = true, desc = "Visual Block Mode" })
+-- clipboard
+vim.keymap.set("v", "<C-c>", [["+y]], { desc = "Copy to Clipboard" })
+vim.keymap.set("v", "<C-x>", [["+d]], { desc = "Cut to Clipboard" })
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select All" })
 
-vim.keymap.set("n", "<leader>r", vim.lsp.buf.rename, { desc = "Rename reference" })
+-- multiline edit
+vim.keymap.set("v", "<S-i>", "<C-v>^<S-i>", { desc = "Multiline edit from top of line" })
+vim.keymap.set("v", "<S-a>", "<C-v>$<S-a>", { desc = "Multiline edit from end of line" })
+
+-- lsp
 
 -- tab
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
@@ -16,8 +17,8 @@ vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab"
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" })
 
 -- split
-vim.keymap.set("n", "<leader>v", "<C-w>v", { desc = "Split window vertically" })
-vim.keymap.set("n", "<leader>s", "<C-w>s", { desc = "Split window horizontally" })
+vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split window vertically" })
+vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split window horizontally" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal size" })
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" })
 
@@ -32,3 +33,9 @@ vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find buffer" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+
+-- misc
+vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
+vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
+vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
+vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
