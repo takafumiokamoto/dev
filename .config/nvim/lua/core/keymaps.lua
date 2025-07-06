@@ -39,3 +39,15 @@ vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
+vim.keymap.set("v", "<", "<gv", { desc = "Outdent lines" }) -- < outdents, gv re-selects
+vim.keymap.set("v", ">", ">gv", { desc = "Indent lines" }) -- > indents, gv re-selects
+-- Move lines down in visual mode
+-- :'<,'>m '>+1<CR> moves the selected lines (from start of selection ' to end of selection ')
+-- to one line after the end of the selection ('>+1).
+-- gv re-selects the moved block.
+vim.keymap.set("v", "J", ":'<,'>m '>+1<CR>gv", { desc = "Move lines down" })
+-- Move lines up in visual mode
+-- :'<,'>m '<-2<CR> moves the selected lines
+-- to two lines before the start of the selection ('<-2). This effectively moves it up by one line.
+-- gv re-selects the moved block.
+vim.keymap.set("v", "K", ":'<,'>m '<-2<CR>gv", { desc = "Move lines up" })

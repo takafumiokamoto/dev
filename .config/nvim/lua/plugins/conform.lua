@@ -6,11 +6,13 @@ return {
 			formatters_by_ft = {
 				lua = { "stylua" },
 				go = { "goimports", "golines", "gofmt" },
+				["_"] = { "pretteir" },
 			},
 			format_on_save = {
-			    lsp_fallback = true,
-			    async = false,
+				lsp_fallback = true,
+				async = false,
 			},
 		})
 	end,
 }
+

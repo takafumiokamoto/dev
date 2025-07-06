@@ -12,6 +12,7 @@
   "bladeFormatter.format.sortTailwindcssClasses": true,
   //   "php.debug.executablePath": "C:\\Program Files\\php\\php-8.2.6-Win32-vs16-x64\\php.exe",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.hotExit": "onExitAndWindowClose",
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "editor.lineNumbers": "relative",
