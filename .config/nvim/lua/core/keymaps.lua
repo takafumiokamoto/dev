@@ -8,6 +8,7 @@ vim.keymap.set("v", "<S-i>", "<C-v>^<S-i>", { desc = "Multiline edit from top of
 vim.keymap.set("v", "<S-a>", "<C-v>$<S-a>", { desc = "Multiline edit from end of line" })
 
 -- lsp
+vim.keymap.set("n", "gd", "<cmd>:lua vim.lsp.buf.definition()<CR>")
 
 -- tab
 vim.keymap.set("n", "<leader>to", "<cmd>tabnew<CR>", { desc = "Open new tab" })
@@ -25,6 +26,7 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current spli
 --buffer
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Go to previous buffer" })
+vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>", { desc = "Remove file from buffer" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
@@ -33,6 +35,9 @@ vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 vim.keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Fuzzy find buffer" })
 vim.keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
+
+-- no neck pain
+vim.keymap.set({ "i", "n", "v" }, "<leader>nn", "<cmd>NoNeckPain<cr>", { desc = "Toggle NoNeckPain" })
 
 -- misc
 vim.keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
