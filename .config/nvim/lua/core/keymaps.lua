@@ -47,6 +47,13 @@ vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
 vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
 vim.keymap.set("v", "<", "<gv", { desc = "Outdent lines" }) -- < outdents, gv re-selects
 vim.keymap.set("v", ">", ">gv", { desc = "Indent lines" }) -- > indents, gv re-selects
+
+-- nvim-tree
+vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" }) -- toggle file explorer
+vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
+vim.keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" }) -- collapse file explorer
+vim.keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" }) -- refresh file explorer
+
 -- Move lines down in visual mode
 -- :'<,'>m '>+1<CR> moves the selected lines (from start of selection ' to end of selection ')
 -- to one line after the end of the selection ('>+1).
