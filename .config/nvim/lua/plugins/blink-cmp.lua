@@ -9,7 +9,9 @@ return {
 		config = function()
 			require("blink.cmp").setup({
 				keymap = {
-					preset = "super-tab",
+					preset = "enter",
+					["<C-k>"] = { "select_prev", "fallback_to_mappings" },
+					["<C-j>"] = { "select_next", "fallback_to_mappings" },
 				},
 				snippets = { preset = "luasnip" },
 				signature = { enabled = true },

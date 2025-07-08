@@ -25,12 +25,15 @@ return {
 
 		telescope.setup({
 			defaults = {
-				layout_strategy = "horizontal",
-				-- layout_strategy = "vertical",
-				layout_config = {
-					horizontal = { width = 0.9, preview_width = 0.6 },
-					vertical = { width = 0.8, preview_width = 0.7 },
-				},
+				find_command = function()
+					return {
+						"rg",
+						"--files",
+						"--hidden",
+						"--glob",
+						"!.*/",
+					}
+				end,
 				path_display = { "smart" },
 				mappings = {
 					i = {
