@@ -26,6 +26,7 @@ return {
 				"lua_ls",
 				"pyright",
 				"gopls",
+				"jdtls",
 			},
 			automatic_installation = true,
 		})

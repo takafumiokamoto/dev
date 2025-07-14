@@ -26,7 +26,7 @@ vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current spli
 --buffer
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<CR>", { desc = "Go to next buffer" })
 vim.keymap.set("n", "<S-h>", "<cmd>bprevious<CR>", { desc = "Go to previous buffer" })
-vim.keymap.set("n", "<leader>x", "<cmd>bd<CR>", { desc = "Remove file from buffer" })
+vim.keymap.set("n", "<C-w>", "<cmd>bd<CR>", { desc = "Remove file from buffer" })
 
 -- telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })

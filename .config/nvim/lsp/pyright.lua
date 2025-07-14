@@ -1,4 +1,9 @@
 return {
+	settings = {
+		python = {
+			pythonPath = ".venv/bin/python",
+		},
+	},
 	cmd = {
 		"pyright",
 	},
@@ -7,9 +12,10 @@ return {
 	},
 	root_markers = {
 		".git",
-        ".venv",
+		".venv",
 		".pyproject.toml",
 	},
 	single_file_support = true,
 	log_level = vim.lsp.protocol.MessageType.Warning,
 }
+
