@@ -1,0 +1,31 @@
+[general]
+live_config_reload = true
+
+[terminal]
+shell = { program = "wsl.exe", args = ["-d", "Ubuntu-24.04", "--cd", "~/"] }
+
+[window]
+padding = { x = 10, y = 10}
+decorations = "Full"
+startup_mode = "Windowed"
+decorations_theme_variant = "Dark"
+title = "Alacritty"
+dynamic_title = false
+
+[font]
+normal = { family = "CaskaydiaMono NFM", style = "Bold Italic" }
+
+[colors]
+[colors.primary]
+background = "#292D3E"
+
+[cursor]
+style = { shape = "Block", blinking = "On"}
+
+[keyboard]
+bindings = [{key = "V", mods = "Control", action = "Paste"}]
+
+[mouse]
+bindings = [{mouse = "Right", mods = "Control", action = "Paste"}]
+
+
